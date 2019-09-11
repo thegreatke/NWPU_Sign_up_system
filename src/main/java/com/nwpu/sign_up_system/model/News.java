@@ -19,4 +19,13 @@ public class News {
         this.sender = sender;
         this.tag = tag;
     }
+
+    public News(String title, int id, String date, String content, String sender, String tag) {
+        this.title = title;
+        this.id = id;
+        this.date = date;
+        this.content = content;
+        this.sender = sender;
+        this.tag = tag;
+    }
 }

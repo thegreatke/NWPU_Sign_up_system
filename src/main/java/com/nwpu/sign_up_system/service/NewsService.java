@@ -13,14 +13,13 @@ public interface NewsService {
     /**
      *  发布一条新闻
      * @param title
-     * @param id
      * @param date
      * @param content
      * @param sender
      * @param tag
      */
     @Transactional
-    void publishNews(String title, String date, String content, String sender, String tag);
+    String publishNews(String title, String date, String content, String sender, String tag);
 
 
     /**
@@ -29,7 +28,7 @@ public interface NewsService {
      * @return
      */
     @Transactional
-    int deleteNews(String id);
+    String deleteNews(int id);
 
 
     /**
@@ -50,8 +49,11 @@ public interface NewsService {
     JSONObject findAllNews();
 
 
-
-
+    /**
+     *
+     * @return title
+     */
+    String findTitleById(int id);
 
 
 
